@@ -42,4 +42,12 @@ class Profil extends CI_Controller {
 		redirect(base_url().'welcome','refresh');
 	}
 
+	public function cari(){
+		$cari = $this->input->post('cari');
+		$data['cari'] = $this->Model_profil->cari($cari);
+
+		// print_r($data['cari']);
+		$this->load->view('head');
+		$this->load->view('cari', $data);
+	}
 }

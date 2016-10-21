@@ -18,9 +18,16 @@
         <a class="navbar-brand" href="<?= base_url().'welcome'?>">Project Imam Nawawi</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
+        
         <ul class="nav navbar-nav">
 
         </ul>
+      <form action="<?= base_url().'Profil/cari' ?>" method="POST" class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input name="cari" type="text" class="form-control" placeholder="Cari">
+        </div>
+        <button type="submit" class="btn btn-default">Cari</button>
+      </form> 
       </div>
     </div>
   </nav>

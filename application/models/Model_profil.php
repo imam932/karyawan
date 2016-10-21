@@ -41,6 +41,12 @@ class Model_profil extends CI_Model {
 		$data = $this->db->get_where('profil', array('nim' => $nim ));
 		return $data->first_row();
 	}
+
+	public function cari($cari){
+		$this->db->where('panggilan', $cari);
+		$cari = $this->db->get('profil');
+		return $cari->result();
+	}
 }
 
 /* End of file Model_profil.php */
